@@ -15,9 +15,6 @@ function load_random_posts(obj){
 jQuery(document).ready(function($){
   $('body').on(
     {mouseover:function(e){
-      this.myTitle = this.title || this.innerText;
-      this.myHref = decodeURI(this.href);
-      this.title = "";
       var tooltip = "<div id='tooltip'><p>"+this.myTitle+"<em>"+this.myHref+"</em>"+"</p></div>";
       $('body').append(tooltip);
       $('#tooltip').css({"opacity":"0.8","top":(e.pageY+20)+"px","left":(e.pageX-10)+"px"}).show('fast');},
